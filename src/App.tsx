@@ -29,21 +29,20 @@ function App() {
       }
 
       setLoading(true)
-      setTimeout(() => {
-        const fetchApi = async () => {
-          try {
-            const res = await api.get(`/users/${userName}`)
-            const data = res.data
-            setRes(data)
-          } catch (error) {
-            setError('Usuário inválido. Verifique e tente novamente.')
-            console.error(`Houve um erro para buscar o usuário: ${error}`)
-          } finally {
-            setLoading(false)
-          }
+
+      const fetchApi = async () => {
+        try {
+          const res = await api.get(`/users/${userName}`)
+          const data = res.data
+          setRes(data)
+        } catch (error) {
+          setError('Usuário inválido. Verifique e tente novamente.')
+          console.error(`Houve um erro para buscar o usuário: ${error}`)
+        } finally {
+          setLoading(false)
         }
-        fetchApi()
-      }, 3000)
+      }
+      fetchApi()
     },
     [userName]
   )
