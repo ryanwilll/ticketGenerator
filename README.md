@@ -1,27 +1,42 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Ticket Generator
 
-Currently, two official plugins are available:
+O objetivo principal deste projeto era consumir a API do github, obtendo as informações como Avatar, Nome e Login de um usuário especifíco. Estes dados ao serem obtidos precisam ser exibidos no layout ao lado, que era a composição do ticket em si. Este ticket é referente a um evento da [Rocketseat](https://www.rocketseat.com.br/) que ocorrerá nos dias 14/08 - 16/08 às 19h, esse evento é sobre a importância e como podemos utilizar as IAs sendo desenvolvedores.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Após gerar o ticket, o usuário pode baixa-lo.
+## Rodando os testes
 
-## Expanding the ESLint configuration
+Para rodar os testes, faça o seguinte:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Clone ou baixe o repositório em sua máquina
+- Entre na pasta raiz do projeto e instale as dependências com `npm install`
+- Após realizar isso basta rodar o projeto com `npm run dev`
 
-- Configure the top-level `parserOptions` property like this:
+## Documentação da API
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```http
+  GET /services/api/users/
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+| Parâmetro   | Tipo       | Descrição                           |
+| :---------- | :--------- | :---------------------------------- |
+| `username` | `string` | **Obrigatório**. Nome do usuário no github |
+
+## Demonstração
+
+- [Visualizar o projeto](https://ticketgenerator.vercel.app/)
+
+![Imagem do Projeto](https://cdn.discordapp.com/attachments/970795622531760170/1142924347099594922/Desktop.png)
+
+## Stack utilizada
+
+- [TailwindCSS](https://tailwindcss.com/)
+- [Axios](https://axios-http.com/ptbr/docs/intro)
+- [HTML to Image](https://www.npmjs.com/package/html-to-image)
+
+## Etiquetas
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
+
