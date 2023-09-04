@@ -27,7 +27,7 @@ Para rodar os testes, faça o seguinte:
 - [Visualizar o projeto](https://ticketgenerator.vercel.app/)
 
 ![Imagem do Projeto](https://cdn.discordapp.com/attachments/970795622531760170/1142924347099594922/Desktop.png)
-
+![Imagem do Projeto versão desktop](https://cdn.discordapp.com/attachments/1036034786046775297/1148394989555023872/image.png)
 ## Stack utilizada
 
 - [TailwindCSS](https://tailwindcss.com/)
