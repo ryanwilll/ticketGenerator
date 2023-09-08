@@ -20,7 +20,7 @@ export default {
       },
       backgroundImage: {
         bgCardTicket: "url('/src/assets/bgCardTicket.png')",
-        imgHero: "url('/src/assets/imgHero.png')",
+        imgHero: "url('/src/assets/imgHero.jpg')",
       },
     },
     screens: {

@@ -105,11 +105,11 @@ function App() {
               <>
                 <div className="flex gap-4 mt-8">
                   <img src={Sucess} alt="Sucesso" />
-                  <p className="font-grotesk text-xl uppercase text-grayLight">Ticket gerado com sucesso</p>
+                  <p className="font-grotesk text-xl smallTablet:text-lg uppercase text-grayLight">Ticket gerado com sucesso</p>
                 </div>
                 <button
                   onClick={convertTicketToPng}
-                  className=" bg-purpleNormal w-96 py-6 px-10 mt-3 uppercase text-white font-bold text-sm hover:bg-purpleDark transition-colors duration-300"
+                  className=" bg-purpleNormal w-96 smallTablet:w-80 py-6 px-10 mt-3 uppercase text-white font-bold text-sm hover:bg-purpleDark transition-colors duration-300"
                   type="submit">
                   Fazer download
                 </button>
