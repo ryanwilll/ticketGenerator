@@ -60,26 +60,26 @@ function App() {
 
   return (
     <>
-      <div className="w-screen h-screen bg-imgHero bg-cover flex text-white justify-around items-center">
+      <div className="w-screen h-screen bg-imgHero bg-cover flex flex-wrap-reverse text-white justify-around items-center">
         <div>
           <h1 className="text-grayDark">
-            <span className="block uppercase text-4xl leading-snug font-grotesk text-transparent bg-clip-text bg-gradient-to-r from-degradeStart via-degradeMiddle to-degradeEnd">
+            <span className="smallTablet:text-2xl block uppercase text-4xl leading-snug font-grotesk text-transparent bg-clip-text bg-gradient-to-r from-degradeStart via-degradeMiddle to-degradeEnd">
               Gere o seu ticket
             </span>
-            <span className="block uppercase text-4xl leading-snug font-grotesk text-transparent bg-clip-text bg-gradient-to-r from-degradeStart via-degradeMiddle to-degradeEnd">
+            <span className="smallTablet:text-2xl block uppercase text-4xl leading-snug font-grotesk text-transparent bg-clip-text bg-gradient-to-r from-degradeStart via-degradeMiddle to-degradeEnd">
               e compartilhe
             </span>
-            <span className="block uppercase text-4xl leading-snug font-grotesk text-transparent bg-clip-text bg-gradient-to-r from-degradeStart via-degradeMiddle to-degradeEnd">
+            <span className="smallTablet:text-2xl block uppercase text-4xl leading-snug font-grotesk text-transparent bg-clip-text bg-gradient-to-r from-degradeStart via-degradeMiddle to-degradeEnd">
               com o mundo
             </span>
             {!res && (
               <form onSubmit={handleSubmit} className="flex mt-8 flex-col text-left">
-                <label htmlFor="username" className="uppercase font-grotesk text-xl text-grayLight">
+                <label htmlFor="username" className="uppercase font-grotesk text-xl smallTablet:text-base text-grayLight">
                   Digite o seu usuário do github
                 </label>
                 <div className="relative flex items-center">
                   <input
-                    className="mt-2 py-4 px-3 font-roboto w-96 outline-none pl-9 placeholder:text-grayDark"
+                    className="mt-2 py-4 px-3 font-roboto w-96 smallTablet:w-64 outline-none pl-9 placeholder:text-grayDark"
                     placeholder="Nome do usuário"
                     type="text"
                     id="username"
@@ -117,10 +117,14 @@ function App() {
             )}
           </h1>
         </div>
-        <div className="bg-bgCardTicket w-[694px] h-max" ref={ticketRef}>
+        <div className="bg-bgCardTicket w-[694px] tablet:w-fit smallTablet:w-[300px] h-max" ref={ticketRef}>
           <div className="py-8 px-10 flex">
-            <div className="flex">
-              <img src={CoverTicket} className="max-h-full flex-shrink-0" alt="Imagem ilustrativa IA para devs" />
+            <div className="flex ">
+              <img
+                src={CoverTicket}
+                className="max-h-full tablet:hidden smallTablet:hidden flex-shrink-0"
+                alt="Imagem ilustrativa IA para devs"
+              />
             </div>
             <div className="bg-white w-72 text-black p-4 flex flex-col ">
               <img

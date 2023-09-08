@@ -23,6 +23,11 @@ export default {
         imgHero: "url('/src/assets/imgHero.png')",
       },
     },
+    screens: {
+      tablet: { min: '401px', max: '650px' },
+
+      smallTablet: { max: '400px' },
+    },
   },
   plugins: [],
 }
